@@ -1,0 +1,21 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %title Alpha Channel Test
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/reset.css'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/layout.css'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/typography.css'}
+    %script{:src => 'vendor/jquery-1.7.1.js'}
+    %script{:src => 'js/application.js'}
+  %body
+    %h1 Alpha Channel Test
+    #original
+      %h2 Original Video
+      %video#video{:autoplay => 'autoplay', :loop => 'loop'}
+        %source{:src => 'media/walle.mp4', :type => 'video/mp4', :codecs => 'avc1.42E01E, mp4a.40.2'}/
+        %source{:src => 'media/walle.webm', :type => 'video/webm', :codecs => 'vp8, vorbis'}/
+        %source{:src => 'media/walle.ogv', :type => 'video/ogg', :codecs => 'theora, vorbis'}/
+    #no_background
+      %h2 Processed Video
+      %canvas#buffer{:width => 400, :height => 600, :style => 'display: none'}
+      %canvas#output{:width => 400, :height => 300}

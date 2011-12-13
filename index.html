@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Alpha Channel Test</title>
+    <link href='css/reset.css' rel='stylesheet' type='text/css' />
+    <link href='css/layout.css' rel='stylesheet' type='text/css' />
+    <link href='css/typography.css' rel='stylesheet' type='text/css' />
+    <script src='vendor/jquery-1.7.1.js'></script>
+    <script src='js/application.js'></script>
+  </head>
+  <body>
+    <h1>Alpha Channel Test</h1>
+    <div id='original'>
+      <h2>Original Video</h2>
+      <video autoplay='autoplay' id='video' loop='loop'>
+        <source codecs='avc1.42E01E, mp4a.40.2' src='media/walle.mp4' type='video/mp4' />
+        <source codecs='vp8, vorbis' src='media/walle.webm' type='video/webm' />
+        <source codecs='theora, vorbis' src='media/walle.ogv' type='video/ogg' />
+      </video>
+    </div>
+    <div id='no_background'>
+      <h2>Processed Video</h2>
+      <canvas height='600' id='buffer' style='display: none' width='400'></canvas>
+      <canvas height='300' id='output' width='400'></canvas>
+    </div>
+  </body>
+</html>
